@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - HarshEco</title>
+    <link rel="icon" href="images/logo.png" type="image/gif" sizes="16x16">
+    <!-- Reference Bootstrap from your index.html file -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+        crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=Abel&display=swap" rel="stylesheet">
+    <style>
+        .about-header {
+            background-color: #c4bbbb;
+            color: white;
+            padding: 100px 0;
+            text-align: center;
+        }
+
+        .about-header h1 {
+            font-size: 48px;
+            margin-bottom: 20px;
+        }
+
+        .about-header p {
+            font-size: 18px;
+        }
+
+        .content-section {
+            padding: 50px 0;
+        }
+
+        .content-section h2 {
+            text-align: center;
+            font-size: 36px;
+            margin-bottom: 30px;
+        }
+
+        .content-section p {
+            font-size: 18px;
+            line-height: 1.8;
+            color: #555;
+            text-align: justify;
+        }
+
+        .values {
+            display: flex;
+            justify-content: space-around;
+            margin-top: 50px;
+        }
+
+        .values div {
+            text-align: center;
+        }
+
+        .values h3 {
+            font-size: 24px;
+            margin-bottom: 15px;
+        }
+
+        .values i {
+            font-size: 40px;
+            color: #28a745;
+            margin-bottom: 15px;
+        }
+
+        .values p {
+            font-size: 16px;
+            color: #666;
+        }
+
+        footer {
+            margin-top: 50px;
+            padding: 20px 0;
+            background-color: #bbb2b2;
+            color: white;
+            text-align: center;
+        }
+
+        footer a {
+            color: #28a745;
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+
+        /* Header nav start  */
+
+        a.nav-link {
+            margin-right: 20px;
+            font-weight: 700;
+        }
+
+        .navbar-light .navbar-nav .active>.nav-link:hover {
+            color: #ffffff;
+        }
+
+        nav.fill ul li a.nav-link {
+            transition: all .5s;
+        }
+
+        nav.fill ul li a.nav-link:after {
+            text-align: left;
+            content: '.';
+            margin: 0;
+            opacity: 0;
+        }
+
+        nav.fill ul li a.nav-link:hover {
+            color: white;
+            z-index: 1;
+        }
+
+        nav.fill ul li a.nav-link:hover:after {
+            z-index: -10;
+            animation: fill 1s forwards;
+            opacity: 1;
+        }
+
+        nav.fill ul li a.nav-link {
+            position: relative;
+        }
+
+        nav.fill ul li a.nav-link:after {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            margin: auto;
+            width: 0%;
+            content: '.';
+            color: transparent;
+            background: #aaa;
+            height: 1px;
+        }
+
+        /* End  */
+
+
+        /* section Mack book start  */
+
+        section#mack-book {
+            margin-bottom: 100px;
+        }
+
+        .carousel-indicators li {
+            width: 20px;
+            height: 8px;
+            border: none;
+            border-radius: 4px;
+            background-color: #CECECE;
+        }
+
+        .carousel-indicators li.active {
+            width: 35px;
+            height: 10px;
+            border-radius: 8px;
+            background-image: linear-gradient(145deg, #f1c40f, #e67e22);
+        }
+
+        .mack {
+            padding: 10% 4%;
+        }
+
+        .mack p {
+            margin-bottom: 30px;
+        }
+
+        .mack a.mack-btn {
+            font-weight: bold;
+            background-color: black;
+            color: white;
+            border: 2px solid black;
+            padding: 15px;
+            border-radius: 10px;
+            text-transform: uppercase;
+            transition: 1s;
+            cursor: pointer;
+        }
+
+        .mack a.mack-btn:hover {
+            background-color: white;
+            color: black;
+        }
+
+        svg.bi.bi-arrow-right {
+            color: white;
+            font-size: 20px;
+            transition: .5s;
+        }
+
+        a.mack-btn:hover svg.bi.bi-arrow-right {
+            transform: rotate(-180deg);
+            color: black;
+        }
+
+        /* End  */
+
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .values {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .values div {
+                margin-bottom: 30px;
+            }
+        }
+
+        @-webkit-keyframes fill {
+            0% {
+                width: 0%;
+                height: 1px;
+            }
+
+            50% {
+                width: 100%;
+                height: 1px;
+            }
+
+            100% {
+                width: 100%;
+                height: 100%;
+                background: #c4bbbb;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <main class="container">
+        <!-- Header start -->
+        <header>
+            <nav class="navbar navbar-expand-lg navbar-light fill">
+                <a class="navbar-brand" href="#"><img src="images/logo.jpg" alt="" height="70px" width="200px"></a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse"
+                    data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item active">
+                            <a class="nav-link" href="index.html">Home</a>
+                        </li>
+                        <li class="nav-item active">
+                            <a class="nav-link" href="catlog.html">Catalog</a>
+                        </li>
+                        <li class="nav-item active">
+                            <a class="nav-link" href="about.html">About Us</a>
+                        </li>
+                        <li class="nav-item active">
+                            <a class="nav-link" href="contact.html">Contact Us</a>
+                        </li>
+                        <li class="nav-item active">
+                            <a class="nav-link" href="fedbackForm.html">Fedback </a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </header>
+        <!-- Header end -->
+
+        <!-- About Us Header -->
+        <section class="about-header">
+            <h1>About Us</h1>
+            <p>Your trusted partner in the world of cutting-edge technology.</p>
+        </section>
+
+        <!-- Company History & Mission Section -->
+        <section class="content-section">
+            <div class="container">
+                <h2>Our Story</h2>
+                <p>
+                    At HarshEco, we started our journey with a vision to provide the latest and most innovative tech
+                    products to consumers worldwide. Founded in 2024, we have been committed to bringing you
+                    cutting-edge gadgets and exceptional customer service. Our founders, tech enthusiasts themselves,
+                    believed in the transformative power of technology and wanted to make it accessible to everyone.
+                </p>
+                <p>
+                    Over the years, we have grown from a small startup to a leading e-commerce platform, offering a wide
+                    range of products, from smartphones to laptops and wearable devices. Our dedication to quality,
+                    affordability, and customer satisfaction has been the driving force behind our success.
+                </p>
+            </div>
+        </section>
+
+        <!-- Mission & Values Section -->
+        <section class="content-section">
+            <div class="container">
+                <h2>Our Mission</h2>
+                <p>
+                    Our mission is to bridge the gap between technology and consumers by providing top-tier gadgets that
+                    enhance your everyday life. We aim to offer products that are both innovative and affordable,
+                    without compromising on quality.
+                </p>
+
+                <div class="values">
+                    <div>
+                        <i class="fas fa-shield-alt"></i>
+                        <h3>Quality</h3>
+                        <p>We ensure every product meets the highest standards.</p>
+                    </div>
+                    <div>
+                        <i class="fas fa-user-friends"></i>
+                        <h3>Customer First</h3>
+                        <p>We always put their needs first.</p>
+                    </div>
+                    <div>
+                        <i class="fas fa-globe"></i>
+                        <h3>Innovation</h3>
+
+                        <p>We stay ahead by offering the latest tech.</p>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 <strong>HarshEco</strong> | Designed by <a href="#">Harshal Patil</a></p>
+    </footer>
+
+
+
+    <!-- Bootstrap JS and dependencies -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+        crossorigin="anonymous"></script>
+    <!-- FontAwesome for icons -->
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</body>
+
+</html>
